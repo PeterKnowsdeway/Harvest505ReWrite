@@ -10,5 +10,8 @@
   "license": "ISC",
   "devDependencies": {
     "@vue/cli": "^5.0.8"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.7"
   }
 }

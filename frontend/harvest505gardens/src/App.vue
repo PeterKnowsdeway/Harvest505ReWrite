@@ -4,12 +4,19 @@
 </template>
 
 <script>
+
+import worker fron './worker-api';
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  methods: {
+    postMessage() {
+      worker.sendMessage()
+    }
   }
 }
 </script>
