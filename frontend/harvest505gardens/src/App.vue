@@ -1,11 +1,13 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <input type="text" v-model="message">
+  <button @click="postMessage">Send Meassage</button>
 </template>
 
 <script>
 
-import worker fron './worker-api';
+import { doHardWork } from './worker-api';
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
@@ -13,10 +15,23 @@ export default {
   components: {
     HelloWorld
   },
-  methods: {
-    postMessage() {
-      worker.sendMessage()
+  data() {
+    return {
+      message: "",
+      time: new Date()
     }
+  },
+  mounted() {
+    setInterval(() => {
+      this.time = new Date();
+    }, 300)
+  },
+  methods: {
+    async postMessage() {
+     const result = doHardWork()
+     console.log('uppercase result', result)
+    },
+
   }
 }
 </script>

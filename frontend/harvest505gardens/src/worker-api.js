@@ -1,7 +1,7 @@
-import Worker from 'worker-loader./worker'
+import Worker from 'worker-loader!./worker'
+import * as Comlink from 'comlink'
 
-const worker = new Worker()
+const worker = Comlink.wrap(new Worker())
 
-export function sendMessage(msg) {
-    worker.postMessage(msg)
-}
+export const toUpperCase = worker.toUpperCase
+export const doHardWork = worker.doHardWork
