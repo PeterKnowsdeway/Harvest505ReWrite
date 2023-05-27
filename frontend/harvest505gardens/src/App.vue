@@ -1,7 +1,28 @@
 <template>
-  <HeaderComponent></HeaderComponent>
-  <input type="text" v-model="message">
-  <button @click="postMessage">Send Meassage</button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Inter">
+    <title>Your Page Title</title>
+  </head>
+  <body>
+     <HeaderComponent></HeaderComponent>
+    <main>
+      <h1 class="sr-only">Content</h1>
+      <form>
+        <fieldset>
+          <legend>Message</legend>
+          <div>
+            <label for="message">Message:</label>
+            <input type="text" id="message" v-model="message" aria-label="Message" title="Enter your message">
+          </div>
+          <button type="button" @click="postMessage">Send Message</button>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
 </template>
 
 <script>

@@ -10,14 +10,37 @@
   }
 
 .logo-img {
-    width: 100px; 
+    width: 60px; 
     height: auto; /* Maintain the aspect ratio */
 }
 
-.nav-link {
-    margin-right: 100px; 
+.navbar-nav li router-link {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.847);
+    line-height: 1.5; /* Increase the line height */
+    text-decoration: none; /* Remove default underline */
+    transition: color 0.6s ease-in-out, text-decoration 0.6s ease-in-out; /* Smooth transition */
 }
 
-:focus {
+.navbar-nav li router-link:focus {
     outline: 2px solid #000;
+    background-color: #000;
+    color: #fff;
+}
+
+.navbar-nav li router-link:hover {
+    color: white; /* Text color on hover */
+    text-decoration: underline white; /* Underline on hover */
+    transform: scale(1.2); /* Increase the size by 20% on hover */
+    background-color: #176f36; /* Change background color on hover */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
+}
+
+@media (max-width: 991.98px) {
+    /* Media query for screens up to 991.98px (breakpoint for dropdown view) */
+    .logo-container {
+        padding-right: 28px;
+    }
 }
