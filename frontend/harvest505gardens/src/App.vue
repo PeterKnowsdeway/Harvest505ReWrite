@@ -7,33 +7,38 @@
     <title>Your Page Title</title>
   </head>
   <body>
-     <HeaderComponent></HeaderComponent>
-    <main>
-      <h1 class="sr-only">Content</h1>
-      <form>
-        <fieldset>
-          <legend>Message</legend>
-          <div>
-            <label for="message">Message:</label>
-            <input type="text" id="message" v-model="message" aria-label="Message" title="Enter your message">
-          </div>
-          <button type="button" @click="postMessage">Send Message</button>
-        </fieldset>
-      </form>
-    </main>
+    <div class="app">
+      <HeaderComponent></HeaderComponent>
+      <main class="content">
+        <h1 class="sr-only">Content</h1>
+        <form>
+          <fieldset>
+            <legend>Message</legend>
+            <div>
+              <label for="message">Message:</label>
+              <input type="text" id="message" v-model="message" aria-label="Message" title="Enter your message">
+            </div>
+            <button type="button" @click="postMessage">Send Message</button>
+          </fieldset>
+        </form>
+      </main>
+      <FooterComponent></FooterComponent>
+  </div>
   </body>
 </html>
 </template>
 
 <script>
 
-import { doHardWork } from './worker-api'
+import { doHardWork } from './util/worker-api'
 import HeaderComponent from './components/global/header/HeaderComponent.vue'
+import FooterComponent from './components/global/footer/FooterComponent.vue'
 
 export default {
   name: 'App',
   components: {
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent,
   },
   data() {
     return {
@@ -64,4 +69,21 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
 </style>
