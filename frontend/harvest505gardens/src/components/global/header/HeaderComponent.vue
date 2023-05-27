@@ -37,7 +37,7 @@
             <router-link to="/blog" class="nav-link me-5">Blog</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/blog" class="nav-link me-5">Something</router-link>
+            <router-link to="/something" class="nav-link me-5">Something</router-link>
           </li>
         </ul>
       </div>
