@@ -10,8 +10,10 @@
   }
 
 .logo-img {
-    width: 60px; 
+    display: block;
+    max-width: 100%; 
     height: auto; /* Maintain the aspect ratio */
+    filter: brightness(1.0) contrast(1.1) saturate(1.2);
 }
 
 .navbar-nav li router-link {
@@ -34,7 +36,7 @@
     color: white; /* Text color on hover */
     text-decoration: underline white; /* Underline on hover */
     transform: scale(1.2); /* Increase the size by 20% on hover */
-    background-color: #176f36; /* Change background color on hover */
+    background-color: #469160; /* Change background color on hover */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
 }
 
@@ -42,5 +44,9 @@
     /* Media query for screens up to 991.98px (breakpoint for dropdown view) */
     .logo-container {
         padding-right: 28px;
+    }
+
+    .logo-img {
+        display: none;
     }
 }
