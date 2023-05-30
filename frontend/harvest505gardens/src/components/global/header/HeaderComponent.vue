@@ -12,29 +12,29 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+      <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link to="/" class="nav-link me-5" aria-current="page">Home</router-link>
+            <router-link to="/" class="nav-link" aria-current="page">Home</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/products" class="nav-link me-5">Products</router-link>
+            <router-link to="/products" class="nav-link">Products</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/contact" class="nav-link me-5">Contact</router-link>
+            <router-link to="/contact" class="nav-link">Contact</router-link>
           </li>
         </ul>
-        <div class="logo-container d-flex align-items-center">
+        <div class="logo-container">
           <router-link to="/" class="navbar-brand">
-            <img src="@/assets/logo3.svg" alt="Farm Logo" class="logo-img" />
+            <img src="@/assets/logo3-svg.svg" alt="Farm Logo" class="logo-img" width="650" height="200" />
           </router-link>
         </div>
         <ul class="navbar-nav">
           <li class="nav-item">
-            <router-link to="/about" class="nav-link me-5">About</router-link>
+            <router-link to="/about" class="nav-link">About</router-link>
           </li>
           <li class="nav-item">
-            <router-link to="/blog" class="nav-link me-5">Blog</router-link>
+            <router-link to="/blog" class="nav-link">Blog</router-link>
           </li>
           <li class="nav-item">
             <router-link to="/something" class="nav-link">Something</router-link>

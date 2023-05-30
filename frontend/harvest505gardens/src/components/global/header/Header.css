@@ -7,13 +7,22 @@
     align-items: center;
     justify-content: center;
     flex-grow: 1;
-  }
+}
 
 .logo-img {
-    display: block;
-    max-width: 100%; 
+    display: inline-flex;
+    max-width: 60%; 
     height: auto; /* Maintain the aspect ratio */
     filter: brightness(1.0) contrast(1.1) saturate(1.2);
+    object-fit: contain;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
 }
 
 .navbar-nav li router-link {
@@ -39,6 +48,15 @@
     background-color: #469160; /* Change background color on hover */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow effect */
 }
+
+.navbar-nav > .nav-item {
+    flex: 1;
+    text-align: center;
+}
+  
+.nav-item {
+    margin: 0 1rem;
+}  
 
 @media (max-width: 991.98px) {
     /* Media query for screens up to 991.98px (breakpoint for dropdown view) */
